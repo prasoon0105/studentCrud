@@ -23,24 +23,24 @@ public class StudentController {
 	StudentRepo repo;
 	
 	@GetMapping("/view")
-	public List<Student> getAllEmployees()
+	public List<Student> getAllStudents()
 	{
 		
-		List<Student> lstEmp= repo.findAll();
+		List<Student> lstStu= repo.findAll();
 		
-		return lstEmp;
+		return lstStu;
 		
 	}
 	
 	@PostMapping("/enter")
-	public void  addEmployee(@RequestBody Student emp)
+	public void  addStudent(@RequestBody Student s)
 	{
-		repo.save(emp);
+		repo.save(s);
 		
 	}
 	
 	@DeleteMapping("/change")
-	public Student updateEmployee(@PathVariable int id)
+	public Student updateStudent(@PathVariable int id)
 	{
 		return null;
 	}
